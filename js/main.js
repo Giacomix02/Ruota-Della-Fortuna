@@ -9,6 +9,7 @@ $(document).ready(function() {
 	$('.new-phrase').click(function() {
 		//Reset the textbox for the new phrase
 		$('.parse-me').val('');
+		$('.char-used').val('');
 		$('#phrase').modal('show');
 		config = 1;
 	});
@@ -44,6 +45,8 @@ $(document).ready(function() {
 			}
 			char_used += ' '+ char;
 			$('.char-used').text('Lettere giocate:'+char_used);
+			
+			e.preventDefault();
 		}
 	});
 });
